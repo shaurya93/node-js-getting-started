@@ -17,7 +17,7 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-app.get('pages/login', function(req,res,next){
+app.get('/login', function(req,res,next){
 	console.log('in login get ejs');
 	
 	res.render('pages/login',{});

@@ -17,13 +17,13 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-app.get('/login', function(req,res,next){
+app.get('pages//login', function(req,res,next){
 	console.log('in login get ejs');
 	
-	res.render('login',{});
+	res.render('pages/login',{});
 });
 
-app.post('/login', function(req,res,next){
+app.post('pages/login', function(req,res,next){
 	
 	
 	module.exports.rec_type = 'ProfileView';	
@@ -79,12 +79,12 @@ search.run(rest_params, function (err, results) {
 			  }
 			  else
 			  {
-				  res.redirect(303,'login');
+				  res.redirect(303,'pages/login');
 			  }
 		}
 		else
 		{
-			res.redirect(303,'login');
+			res.redirect(303,'pages/login');
 		}
 	
   
